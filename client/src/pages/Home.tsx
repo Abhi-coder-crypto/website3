@@ -13,7 +13,7 @@ import headphones from "@assets/Group_1768203634425.png";
 import section3Bg from "@assets/Rectangle_(2)_1768205296891.png";
 import cardImg from "@assets/image_1768205726228.png";
 import manzoorCover from "@assets/image_1768206021449.png";
-import playerControls from "@assets/Group_(3)_1768206216459.png";
+import playerControls from "@assets/Group_(3)_1768206388568.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -156,10 +156,10 @@ export default function Home() {
             <div className="mt-16 flex justify-center">
               <div className="relative w-full max-w-xl">
                 <img src={playerControls} alt="Player Background" className="w-full h-auto" />
-                <div className="absolute top-[12%] left-[4.5%] w-[22%] aspect-square rounded-lg overflow-hidden">
+                <div className="absolute top-[18%] left-[6%] w-[18%] aspect-square rounded-lg overflow-hidden">
                   <img src={manzoorCover} alt="Manzoor Cover" className="w-full h-full object-cover" />
                 </div>
-                <div className="absolute top-[12%] left-[29%]">
+                <div className="absolute top-[18%] left-[26%]">
                   <div className="text-white text-base md:text-xl font-medium font-sans leading-tight">Manzoor</div>
                   <div className="text-zinc-400 text-xs md:text-sm font-sans">Abhijit Vaghani</div>
                 </div>
