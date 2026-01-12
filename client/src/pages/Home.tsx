@@ -35,7 +35,7 @@ export default function Home() {
           <img 
             src={heroImg} 
             alt="Abhijit Vaghani" 
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center md:object-top"
           />
         </div>
 
