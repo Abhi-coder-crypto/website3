@@ -16,6 +16,9 @@ import cardImg from "@assets/image_1768205726228.png";
 import manzoorCover from "@assets/image_1768206021449.png";
 import playerControls from "@assets/Group_(3)_1768206877954.png";
 import footerBg from "@assets/Rectangle_(3)_1768207396961.png";
+import social1 from "@assets/image_1768207430692.png";
+import social2 from "@assets/image_1768207450556.png";
+import social3 from "@assets/image_1768207458634.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -184,13 +187,44 @@ export default function Home() {
       </section>
 
       {/* NEW RED SECTION */}
-      <section className="relative w-full overflow-hidden">
-        <div className="relative w-full h-[200px] md:h-[300px]">
+      <section className="relative w-full overflow-hidden bg-white">
+        <div className="text-center py-12">
+          <h2 className="text-3xl md:text-4xl font-sans font-medium text-black">Social Media Posts</h2>
+        </div>
+        
+        <div className="relative w-full h-auto min-h-[400px] flex items-center justify-center py-12 px-6">
           <img 
             src={footerBg} 
             alt="Red Section Background" 
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
+          
+          <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-white/10"
+            >
+              <img src={social1} alt="Social Media 1" className="w-full h-full object-cover" />
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-white/10"
+            >
+              <img src={social2} alt="Social Media 2" className="w-full h-full object-cover" />
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-white/10"
+            >
+              <img src={social3} alt="Social Media 3" className="w-full h-full object-cover" />
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
