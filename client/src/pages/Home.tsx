@@ -62,8 +62,8 @@ export default function Home() {
 
       {/* SECTION 2: WHITE BACKGROUND SECTION */}
       <section className="relative w-full bg-white overflow-hidden py-32 md:py-48 min-h-[500px]">
-        {/* Main Vinyl Record - Positioned to show more of the top as in reference */}
-        <div className="absolute top-48 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
+        {/* Main Vinyl Record - Positioned to attach perfectly to the section line */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(50%-48px)] w-full max-w-[800px] z-10">
           <img 
             src={vinylCenter} 
             alt="Vinyl Record" 
