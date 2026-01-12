@@ -61,105 +61,60 @@ export default function Home() {
       </section>
 
       {/* SECTION 2: CREATIVE COMPOSITION */}
-      <section id="music" className="relative min-h-screen w-full bg-white flex items-center justify-center py-24 overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section id="music" className="relative h-screen w-full bg-white flex items-center justify-center overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10 h-full">
+          <div className="relative h-full w-full flex items-center justify-center">
             
-            {/* Left: Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-black order-2 lg:order-1"
+            {/* Central Element - Vinyl */}
+            <motion.div 
+              style={{ rotate }}
+              className="absolute w-[300px] h-[300px] md:w-[600px] md:h-[600px] z-10"
             >
-              <h2 className="text-6xl md:text-8xl font-display font-bold tracking-tighter mb-6 text-black">
-                THE <br/>
-                <span className="text-primary italic">SOUND</span>
-              </h2>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-md font-medium leading-relaxed">
-                Crafting sonic landscapes that transcend boundaries. A fusion of classical roots and modern production.
-              </p>
-              <div className="flex gap-4">
-                 <button className="px-8 py-4 bg-black text-white font-bold tracking-widest hover:bg-primary transition-colors duration-300">
-                   LISTEN NOW
-                 </button>
-                 <button className="px-8 py-4 border-2 border-black text-black font-bold tracking-widest hover:bg-black hover:text-white transition-colors duration-300">
-                   DISCOGRAPHY
-                 </button>
-              </div>
+              <img 
+                src={vinylRecord} 
+                alt="Vinyl Record" 
+                className="w-full h-full object-contain"
+              />
             </motion.div>
 
-            {/* Right: Composition */}
-            <div className="relative h-[500px] md:h-[700px] w-full flex items-center justify-center order-1 lg:order-2">
-              
-              {/* Central Element - Vinyl */}
-              <motion.div 
-                style={{ rotate }}
-                className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] z-10"
-              >
-                <img 
-                  src={vinylRecord} 
-                  alt="Vinyl Record" 
-                  className="w-full h-full object-contain drop-shadow-2xl"
-                />
-              </motion.div>
-
-              {/* Center Cap */}
-              <div className="absolute z-20 w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden shadow-inner">
-                 <img 
-                  src={vinylCenter} 
-                  alt="Center" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Floating Element: Headphones */}
-              <motion.div 
-                style={{ y: y1 }}
-                className="absolute -top-10 -right-10 md:top-0 md:right-0 w-32 md:w-48 z-30"
-              >
-                <img 
-                  src={headphones} 
-                  alt="Headphones" 
-                  className="w-full h-full object-contain drop-shadow-xl filter saturate-0 hover:saturate-100 transition-all duration-500"
-                />
-              </motion.div>
-
-              {/* Floating Element: Cassette */}
-              <motion.div 
-                style={{ y: y2 }}
-                className="absolute bottom-0 left-0 md:bottom-10 md:-left-10 w-40 md:w-56 z-30"
-              >
-                <img 
-                  src={playlistTape} 
-                  alt="Cassette Tape" 
-                  className="w-full h-full object-contain drop-shadow-xl filter sepia hover:sepia-0 transition-all duration-500"
-                />
-              </motion.div>
-
-              {/* Floating Element: Notes */}
-              <motion.div 
-                animate={{ 
-                  y: [0, -20, 0],
-                  opacity: [0.5, 1, 0.5] 
-                }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0 scale-150 opacity-20"
-              >
-                 <img 
-                  src={musicNotes} 
-                  alt="Notes" 
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-
+            {/* Center Cap */}
+            <div className="absolute z-20 w-24 h-24 md:w-48 md:h-48 rounded-full overflow-hidden">
+               <img 
+                src={vinylCenter} 
+                alt="Center" 
+                className="w-full h-full object-cover"
+              />
             </div>
+
+            {/* Floating Element: Headphones */}
+            <div className="absolute top-[20%] right-[5%] md:top-[25%] md:right-[15%] w-24 md:w-40 z-30">
+              <img 
+                src={headphones} 
+                alt="Headphones" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Floating Element: Cassette */}
+            <div className="absolute top-[30%] left-[5%] md:top-[35%] md:left-[15%] w-32 md:w-48 z-30">
+              <img 
+                src={playlistTape} 
+                alt="Cassette Tape" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+
+            {/* Floating Element: Notes */}
+            <div className="absolute bottom-[20%] left-[20%] md:bottom-[25%] md:left-[30%] w-12 md:w-20 z-30">
+               <img 
+                src={musicNotes} 
+                alt="Notes" 
+                className="w-full h-full object-contain"
+              />
+            </div>
+
           </div>
         </div>
-        
-        {/* Background texture noise */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-multiply"></div>
       </section>
 
       {/* SECTION 3: CONTACT */}
