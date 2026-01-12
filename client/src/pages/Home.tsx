@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { ContactForm } from "@/components/ContactForm";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Play, SkipBack, SkipForward, Volume1, Volume2 } from "lucide-react";
 import { ArrowDown } from "lucide-react";
 
 // Asset imports based on implementation notes
@@ -154,10 +155,44 @@ export default function Home() {
 
             {/* Music Player Placeholder */}
             <div className="mt-16 flex justify-center">
-              <div className="relative w-full max-w-xl">
-                <img src={playerControls} alt="Player Background" className="w-full h-auto" />
-                <div className="absolute top-[8.5%] left-[6.3%] z-10 overflow-hidden rounded-[10px]" style={{ width: "22.5%", height: "80.5%" }}>
-                  <img src={manzoorCover} alt="Manzoor Cover" className="w-full h-full object-cover" />
+              <div className="w-full max-w-2xl bg-black rounded-[32px] p-6 shadow-2xl">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  {/* Left: Album Art */}
+                  <div className="w-48 h-48 md:w-56 md:h-56 rounded-3xl overflow-hidden flex-shrink-0 shadow-lg border border-zinc-800">
+                    <img src={manzoorCover} alt="Manzoor Cover" className="w-full h-full object-cover" />
+                  </div>
+
+                  {/* Right: Info and Controls */}
+                  <div className="flex-1 flex flex-col justify-center space-y-8 w-full">
+                    <div className="space-y-1">
+                      <h3 className="text-white text-3xl md:text-4xl font-sans font-medium">Manzoor</h3>
+                      <p className="text-zinc-400 text-lg md:text-xl font-sans">Abhijit Vaghani</p>
+                    </div>
+
+                    {/* Simple Player Interface based on reference */}
+                    <div className="flex flex-col space-y-6">
+                      <div className="flex items-center justify-center md:justify-start gap-12">
+                        <button className="text-white hover:text-zinc-300 transition-colors">
+                          <SkipBack size={32} fill="currentColor" />
+                        </button>
+                        <button className="text-white hover:text-zinc-300 transition-colors">
+                          <Play size={40} fill="currentColor" />
+                        </button>
+                        <button className="text-white hover:text-zinc-300 transition-colors">
+                          <SkipForward size={32} fill="currentColor" />
+                        </button>
+                      </div>
+                      
+                      {/* Volume Slider Mockup */}
+                      <div className="flex items-center gap-4 max-w-xs">
+                        <Volume1 size={20} className="text-zinc-500" />
+                        <div className="flex-1 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                          <div className="w-2/3 h-full bg-white rounded-full"></div>
+                        </div>
+                        <Volume2 size={20} className="text-zinc-500" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
