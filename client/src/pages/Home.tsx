@@ -156,6 +156,9 @@ export default function Home() {
             <div className="mt-16 flex justify-center">
               <div className="relative w-full max-w-xl">
                 <img src={playerControls} alt="Player Background" className="w-full h-auto" />
+                <div className="absolute top-[8%] left-[6.1%] z-10 overflow-hidden rounded-[10px]" style={{ width: "107.18px", height: "107.18px" }}>
+                  <img src={manzoorCover} alt="Manzoor Cover" className="w-full h-full object-cover" />
+                </div>
               </div>
             </div>
           </div>
