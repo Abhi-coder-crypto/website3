@@ -28,9 +28,8 @@ export default function Home() {
           <img 
             src={heroImg} 
             alt="Abhijit Vaghani" 
-            className="w-full h-full object-cover object-top opacity-80"
+            className="w-full h-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
         </div>
 
         {/* Content Overlay */}
@@ -41,13 +40,6 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-4xl"
           >
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-display font-black tracking-tight leading-none text-white">
-              ABHIJIT
-              <span className="block font-script text-primary text-6xl md:text-8xl lg:text-[10rem] mt-2 md:-mt-8 ml-4 md:ml-20">Vaghani</span>
-            </h1>
-            <p className="mt-8 text-lg md:text-xl text-white/70 max-w-xl font-light tracking-wide border-l-2 border-primary pl-6">
-              Music Producer • Composer • Artist
-            </p>
           </motion.div>
         </div>
 
