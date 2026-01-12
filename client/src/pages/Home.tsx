@@ -134,7 +134,7 @@ export default function Home() {
         {/* Cards Section with overlap */}
         <div className="relative z-20 w-full bg-white pb-24">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto -mt-16 md:-mt-24">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-7xl mx-auto -mt-16 md:-mt-24">
               {[1, 2, 3].map((i) => (
                 <motion.div 
                   key={i}
@@ -142,7 +142,8 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="relative aspect-[4/5] overflow-hidden rounded-[30px_30px_0_0] md:rounded-[50px_50px_0_0] shadow-xl"
+                  className="relative overflow-hidden rounded-[30px_30px_0_0] md:rounded-[50px_50px_0_0] shadow-xl flex-shrink-0"
+                  style={{ width: "318.13px", height: "522.98px" }}
                 >
                   <img src={cardImg} alt={`Project ${i}`} className="w-full h-full object-cover" />
                 </motion.div>
