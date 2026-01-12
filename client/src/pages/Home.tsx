@@ -60,6 +60,13 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* SECTION 2: WHITE BACKGROUND SECTION */}
+      <section className="relative w-full bg-white py-24 min-h-[400px]">
+        <div className="container mx-auto px-6">
+          {/* Content will be added here once provided */}
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-black py-12 border-t border-white/10">
         <div className="container mx-auto px-6 text-center">
