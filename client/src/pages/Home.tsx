@@ -132,7 +132,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
                   className="relative overflow-hidden rounded-[20px_20px_0_0] md:rounded-[50px_50px_0_0] shadow-xl flex-shrink-0"
-                  style={{ width: "clamp(150px, 28vw, 318.13px)", height: "clamp(246px, 46vw, 522.98px)" }}
+                  style={{ width: "318.13px", height: "522.98px" }}
                 >
                   <img src={cardImg} alt={`Project ${i}`} className="w-full h-full object-cover" />
                 </motion.div>
