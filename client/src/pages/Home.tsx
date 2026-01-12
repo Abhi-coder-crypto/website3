@@ -156,10 +156,10 @@ export default function Home() {
             <div className="mt-16 flex justify-center">
               <div className="relative w-full max-w-xl">
                 <img src={playerControls} alt="Player Background" className="w-full h-auto" />
-                <div className="absolute top-[18%] left-[6%] w-[18%] aspect-square rounded-lg overflow-hidden z-10">
+                <div className="absolute top-[8.5%] left-[6%] w-[22.5%] aspect-square rounded-[8px] overflow-hidden z-10">
                   <img src={manzoorCover} alt="Manzoor Cover" className="w-full h-full object-cover" />
                 </div>
-                <div className="absolute top-[18%] left-[26%] z-10">
+                <div className="absolute top-[13%] left-[30.5%] z-10">
                   <div className="text-white text-base md:text-xl font-medium font-sans leading-tight">Manzoor</div>
                   <div className="text-zinc-400 text-xs md:text-sm font-sans">Abhijit Vaghani</div>
                 </div>
