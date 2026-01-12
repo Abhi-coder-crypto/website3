@@ -119,12 +119,12 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 py-12">
+        <div className="relative z-10 container mx-auto px-6 pt-12 pb-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-display mb-8 tracking-tight text-white">
+            <h2 className="text-4xl md:text-5xl font-display tracking-tight text-white leading-tight">
               Abhijit Vaghani - Digital Presence <br /> & Artist Marketing
             </h2>
-            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mt-6">
               We partnered with singer Abhijit Vaghani to strengthen his digital presence through strategic content ideation and social media marketing. Our approach focused on showcasing his musical journey, personality, and artistry while building consistent audience engagement across platforms.
             </p>
           </div>
