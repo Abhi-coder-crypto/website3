@@ -1,18 +1,23 @@
-import { users, type User, type InsertUser } from "@shared/schema";
+import { users, inquiries, type User, type InsertUser, type Inquiry, type InsertInquiry } from "@shared/schema";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
+  createInquiry(inquiry: InsertInquiry): Promise<Inquiry>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<number, User>;
+  private inquiries: Map<number, Inquiry>;
   currentId: number;
+  currentInquiryId: number;
 
   constructor() {
     this.users = new Map();
+    this.inquiries = new Map();
     this.currentId = 1;
+    this.currentInquiryId = 1;
   }
 
   async getUser(id: number): Promise<User | undefined> {
@@ -30,6 +35,13 @@ export class MemStorage implements IStorage {
     const user: User = { ...insertUser, id };
     this.users.set(id, user);
     return user;
+  }
+
+  async createInquiry(insertInquiry: InsertInquiry): Promise<Inquiry> {
+    const id = this.currentInquiryId++;
+    const inquiry: Inquiry = { ...insertInquiry, id, createdAt: new Date() };
+    this.inquiries.set(id, inquiry);
+    return inquiry;
   }
 }
 
