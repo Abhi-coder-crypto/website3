@@ -62,8 +62,8 @@ export default function Home() {
 
       {/* SECTION 2: WHITE BACKGROUND SECTION */}
       <section className="relative w-full bg-white overflow-hidden py-32 md:py-48 min-h-[500px]">
-        {/* Main Vinyl Record - Positioned half-way up as in reference */}
-        <div className="absolute top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
+        {/* Main Vinyl Record - Positioned to show more of the top as in reference */}
+        <div className="absolute top-48 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
           <img 
             src={vinylCenter} 
             alt="Vinyl Record" 
@@ -89,7 +89,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="absolute left-[25%] bottom-[15%] w-12 md:w-16"
+              className="absolute left-[20%] bottom-[10%] w-12 md:w-16"
             >
               <img src={musicNotes} alt="Music Notes" className="w-full h-auto pointer-events-auto" />
             </motion.div>
