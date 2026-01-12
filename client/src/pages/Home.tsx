@@ -52,9 +52,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 2: WHITE BACKGROUND SECTION */}
-      <section className="relative w-full bg-white overflow-hidden py-32 md:py-48 min-h-[500px]">
+      <section className="relative w-full bg-white overflow-hidden py-16 md:py-48 min-h-[300px] md:min-h-[500px]">
         {/* Main Vinyl Record - Restored to user's preferred alignment */}
-        <div className="absolute top-44 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
+        <div className="absolute top-20 md:top-44 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
           <img 
             src={vinylCenter} 
             alt="Vinyl Record" 
