@@ -119,7 +119,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 py-24">
+        <div className="relative z-10 container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-display mb-8 tracking-tight text-white">
               Abhijit Vaghani - Digital Presence <br /> & Artist Marketing
