@@ -89,7 +89,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="absolute left-[20%] bottom-[15%] w-12 md:w-16 rotate-[10deg]"
+              className="absolute left-[30%] bottom-[15%] w-12 md:w-16 rotate-[10deg]"
             >
               <img src={musicNotes} alt="Music Notes" className="w-full h-auto pointer-events-auto" />
             </motion.div>
