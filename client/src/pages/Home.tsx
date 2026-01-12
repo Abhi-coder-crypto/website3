@@ -10,7 +10,7 @@ import vinylCenter from "@assets/Rectangle_(1)_1768203634425.png";
 import cassette from "@assets/Group_(1)_1768203634424.png";
 import musicNotes from "@assets/Group_(2)_1768203634423.png";
 import headphones from "@assets/Group_1768203634425.png";
-import section3Bg from "@assets/Rectangle_(2)_1768205137502.png";
+import section3Bg from "@assets/Rectangle_(2)_1768205296891.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -109,9 +109,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: DIGITAL PRESENCE */}
-      <section className="relative w-full min-h-screen bg-black overflow-hidden">
+      <section className="relative w-full min-h-screen bg-black overflow-hidden flex items-center justify-center">
         {/* Crumpled Paper Background */}
-        <div className="absolute inset-0 z-0 opacity-40">
+        <div className="absolute inset-0 z-0">
           <img 
             src={section3Bg} 
             alt="Background Texture" 
@@ -120,33 +120,13 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 container mx-auto px-6 py-24">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 tracking-tight">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-6xl font-display mb-8 tracking-tight text-white uppercase italic">
               Abhijit Vaghani - Digital Presence <br /> & Artist Marketing
             </h2>
-            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto font-light">
               We partnered with singer Abhijit Vaghani to strengthen his digital presence through strategic content ideation and social media marketing. Our approach focused on showcasing his musical journey, personality, and artistry while building consistent audience engagement across platforms.
             </p>
-          </div>
-
-          {/* Placeholders for cards - will add content as user provides */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="aspect-[3/4] bg-[#8B2323] rounded-[40px_40px_0_0] md:rounded-[100px_100px_0_0]"></div>
-            ))}
-          </div>
-
-          {/* Music Player Placeholder - will add content as user provides */}
-          <div className="mt-12 flex justify-center">
-            <div className="w-full max-w-md bg-black/80 backdrop-blur-md rounded-2xl p-4 border border-white/10">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-zinc-800 rounded-lg"></div>
-                <div className="flex-1">
-                  <div className="text-sm font-medium">Manzoor</div>
-                  <div className="text-xs text-zinc-500">Abhijit Vaghani</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
