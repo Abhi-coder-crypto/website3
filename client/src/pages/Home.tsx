@@ -123,7 +123,7 @@ export default function Home() {
         {/* Cards Section with overlap */}
         <div className="relative z-20 w-full bg-white pb-24">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-7xl mx-auto -mt-8 md:-mt-12">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 max-w-7xl mx-auto -mt-8 md:-mt-12">
               {[1, 2, 3].map((i) => (
                 <motion.div 
                   key={i}
@@ -131,8 +131,8 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="relative overflow-hidden rounded-[30px_30px_0_0] md:rounded-[50px_50px_0_0] shadow-xl flex-shrink-0"
-                  style={{ width: "318.13px", height: "522.98px" }}
+                  className="relative overflow-hidden rounded-[20px_20px_0_0] md:rounded-[50px_50px_0_0] shadow-xl flex-shrink-0"
+                  style={{ width: "clamp(150px, 28vw, 318.13px)", height: "clamp(246px, 46vw, 522.98px)" }}
                 >
                   <img src={cardImg} alt={`Project ${i}`} className="w-full h-full object-cover" />
                 </motion.div>
@@ -140,42 +140,42 @@ export default function Home() {
             </div>
 
             {/* Music Player Placeholder */}
-            <div className="mt-16 flex justify-center">
-              <div className="w-full max-w-lg bg-black rounded-[24px] p-4 shadow-2xl">
-                <div className="flex items-center gap-6">
+            <div className="mt-8 md:mt-16 flex justify-center px-4">
+              <div className="w-full max-w-lg bg-black rounded-[16px] md:rounded-[24px] p-3 md:p-4 shadow-2xl">
+                <div className="flex items-center gap-3 md:gap-6">
                   {/* Left: Album Art */}
-                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden flex-shrink-0 shadow-lg border border-zinc-800">
+                  <div className="w-20 h-20 md:w-40 md:h-40 rounded-xl md:rounded-2xl overflow-hidden flex-shrink-0 shadow-lg border border-zinc-800">
                     <img src={manzoorCover} alt="Manzoor Cover" className="w-full h-full object-cover" />
                   </div>
 
                   {/* Right: Info and Controls */}
-                  <div className="flex-1 flex flex-col justify-center space-y-4 w-full">
+                  <div className="flex-1 flex flex-col justify-center space-y-2 md:space-y-4 w-full overflow-hidden">
                     <div className="space-y-0.5">
-                      <h3 className="text-white text-xl md:text-2xl font-sans font-medium">Manzoor</h3>
-                      <p className="text-zinc-400 text-sm md:text-base font-sans">Abhijit Vaghani</p>
+                      <h3 className="text-white text-base md:text-2xl font-sans font-medium truncate">Manzoor</h3>
+                      <p className="text-zinc-400 text-xs md:text-base font-sans truncate">Abhijit Vaghani</p>
                     </div>
 
                     {/* Simple Player Interface based on reference */}
-                    <div className="flex flex-col space-y-4">
-                      <div className="flex items-center justify-center md:justify-start gap-8">
+                    <div className="flex flex-col space-y-2 md:space-y-4">
+                      <div className="flex items-center justify-start gap-4 md:gap-8">
                         <button className="text-white hover:text-zinc-300 transition-colors">
-                          <SkipBack size={20} fill="currentColor" />
+                          <SkipBack size={16} fill="currentColor" />
                         </button>
                         <button className="text-white hover:text-zinc-300 transition-colors">
-                          <Play size={28} fill="currentColor" />
+                          <Play size={22} fill="currentColor" />
                         </button>
                         <button className="text-white hover:text-zinc-300 transition-colors">
-                          <SkipForward size={20} fill="currentColor" />
+                          <SkipForward size={16} fill="currentColor" />
                         </button>
                       </div>
                       
                       {/* Volume Slider Mockup */}
-                      <div className="flex items-center gap-3 max-w-[180px]">
-                        <Volume1 size={14} className="text-zinc-500" />
+                      <div className="flex items-center gap-2 md:gap-3 w-full max-w-[120px] md:max-w-[180px]">
+                        <Volume1 size={12} className="text-zinc-500" />
                         <div className="flex-1 h-1 bg-zinc-800 rounded-full overflow-hidden">
                           <div className="w-2/3 h-full bg-white rounded-full"></div>
                         </div>
-                        <Volume2 size={14} className="text-zinc-500" />
+                        <Volume2 size={12} className="text-zinc-500" />
                       </div>
                     </div>
                   </div>
@@ -188,23 +188,23 @@ export default function Home() {
 
       {/* NEW RED SECTION */}
       <section className="relative w-full overflow-hidden bg-white">
-        <div className="text-center py-12">
-          <h2 className="text-3xl md:text-4xl font-sans font-medium text-black">Social Media Posts</h2>
+        <div className="text-center py-8 md:py-12">
+          <h2 className="text-2xl md:text-4xl font-sans font-medium text-black">Social Media Posts</h2>
         </div>
         
-        <div className="relative w-full h-auto min-h-[400px] flex items-center justify-center py-12 px-6">
+        <div className="relative w-full h-auto min-h-[300px] md:min-h-[400px] flex items-center justify-center py-8 md:py-12 px-4 md:px-6">
           <img 
             src={footerBg} 
             alt="Red Section Background" 
             className="absolute inset-0 w-full h-full object-cover"
           />
           
-          <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-white/10"
+              className="aspect-square rounded-lg md:rounded-xl overflow-hidden shadow-2xl border-2 md:border-4 border-white/10"
             >
               <img src={social1} alt="Social Media 1" className="w-full h-full object-cover" />
             </motion.div>
@@ -212,7 +212,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-white/10"
+              className="aspect-square rounded-lg md:rounded-xl overflow-hidden shadow-2xl border-2 md:border-4 border-white/10"
             >
               <img src={social2} alt="Social Media 2" className="w-full h-full object-cover" />
             </motion.div>
@@ -220,7 +220,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-white/10"
+              className="aspect-square rounded-lg md:rounded-xl overflow-hidden shadow-2xl border-2 md:border-4 border-white/10"
             >
               <img src={social3} alt="Social Media 3" className="w-full h-full object-cover" />
             </motion.div>
