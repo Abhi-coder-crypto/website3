@@ -62,7 +62,7 @@ export default function Home() {
 
       {/* SECTION 2: WHITE BACKGROUND SECTION */}
       <section className="relative w-full bg-white overflow-hidden py-32 md:py-48">
-        <div className="absolute top-24 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
+        <div className="absolute top-48 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
           <img 
             src={vinylCenter} 
             alt="Vinyl Record" 
