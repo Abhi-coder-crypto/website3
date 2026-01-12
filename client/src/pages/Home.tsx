@@ -15,6 +15,7 @@ import section3Bg from "@assets/Rectangle_(2)_1768205296891.png";
 import cardImg from "@assets/image_1768205726228.png";
 import manzoorCover from "@assets/image_1768206021449.png";
 import playerControls from "@assets/Group_(3)_1768206877954.png";
+import footerBg from "@assets/Rectangle_(3)_1768207305899.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
