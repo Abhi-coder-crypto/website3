@@ -61,15 +61,8 @@ export default function Home() {
       </section>
 
       {/* SECTION 2: WHITE BACKGROUND SECTION */}
-      <section className="relative w-full bg-white overflow-hidden py-20">
+      <section className="relative w-full bg-white overflow-hidden py-32 md:py-48">
         <div className="w-full flex justify-center">
-          <div className="relative w-full max-w-[1200px] aspect-[16/6] md:aspect-[21/6] overflow-hidden flex justify-center">
-            <img 
-              src={vinylCenter} 
-              alt="CD Vinyl Upside Down" 
-              className="w-full h-auto object-contain scale-[0.8] origin-top translate-y-[-10%]"
-            />
-          </div>
         </div>
       </section>
 
