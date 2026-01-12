@@ -155,41 +155,41 @@ export default function Home() {
 
             {/* Music Player Placeholder */}
             <div className="mt-16 flex justify-center">
-              <div className="w-full max-w-2xl bg-black rounded-[32px] p-6 shadow-2xl">
-                <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-full max-w-lg bg-black rounded-[24px] p-4 shadow-2xl">
+                <div className="flex items-center gap-6">
                   {/* Left: Album Art */}
-                  <div className="w-48 h-48 md:w-56 md:h-56 rounded-3xl overflow-hidden flex-shrink-0 shadow-lg border border-zinc-800">
+                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden flex-shrink-0 shadow-lg border border-zinc-800">
                     <img src={manzoorCover} alt="Manzoor Cover" className="w-full h-full object-cover" />
                   </div>
 
                   {/* Right: Info and Controls */}
-                  <div className="flex-1 flex flex-col justify-center space-y-8 w-full">
-                    <div className="space-y-1">
-                      <h3 className="text-white text-3xl md:text-4xl font-sans font-medium">Manzoor</h3>
-                      <p className="text-zinc-400 text-lg md:text-xl font-sans">Abhijit Vaghani</p>
+                  <div className="flex-1 flex flex-col justify-center space-y-4 w-full">
+                    <div className="space-y-0.5">
+                      <h3 className="text-white text-xl md:text-2xl font-sans font-medium">Manzoor</h3>
+                      <p className="text-zinc-400 text-sm md:text-base font-sans">Abhijit Vaghani</p>
                     </div>
 
                     {/* Simple Player Interface based on reference */}
-                    <div className="flex flex-col space-y-6">
-                      <div className="flex items-center justify-center md:justify-start gap-12">
+                    <div className="flex flex-col space-y-4">
+                      <div className="flex items-center justify-center md:justify-start gap-8">
                         <button className="text-white hover:text-zinc-300 transition-colors">
-                          <SkipBack size={32} fill="currentColor" />
+                          <SkipBack size={20} fill="currentColor" />
                         </button>
                         <button className="text-white hover:text-zinc-300 transition-colors">
-                          <Play size={40} fill="currentColor" />
+                          <Play size={28} fill="currentColor" />
                         </button>
                         <button className="text-white hover:text-zinc-300 transition-colors">
-                          <SkipForward size={32} fill="currentColor" />
+                          <SkipForward size={20} fill="currentColor" />
                         </button>
                       </div>
                       
                       {/* Volume Slider Mockup */}
-                      <div className="flex items-center gap-4 max-w-xs">
-                        <Volume1 size={20} className="text-zinc-500" />
-                        <div className="flex-1 h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                      <div className="flex items-center gap-3 max-w-[180px]">
+                        <Volume1 size={14} className="text-zinc-500" />
+                        <div className="flex-1 h-1 bg-zinc-800 rounded-full overflow-hidden">
                           <div className="w-2/3 h-full bg-white rounded-full"></div>
                         </div>
-                        <Volume2 size={20} className="text-zinc-500" />
+                        <Volume2 size={14} className="text-zinc-500" />
                       </div>
                     </div>
                   </div>
