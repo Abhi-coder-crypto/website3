@@ -62,8 +62,8 @@ export default function Home() {
 
       {/* SECTION 2: WHITE BACKGROUND SECTION */}
       <section className="relative w-full bg-white overflow-hidden py-32 md:py-48 min-h-[500px]">
-        {/* Main Vinyl Record - Positioned further down based on user feedback */}
-        <div className="absolute top-44 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
+        {/* Main Vinyl Record - Positioned to exactly match reference image alignment */}
+        <div className="absolute top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
           <img 
             src={vinylCenter} 
             alt="Vinyl Record" 
@@ -79,17 +79,17 @@ export default function Home() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="absolute left-[15%] top-[25%] w-24 md:w-32 rotate-[-15deg]"
+              className="absolute left-[8%] top-[35%] w-24 md:w-32 rotate-[-15deg]"
             >
               <img src={cassette} alt="Cassette Tape" className="w-full h-auto pointer-events-auto" />
             </motion.div>
 
-            {/* Music Notes (Below CD / Bottom Left) */}
+            {/* Music Notes (Bottom Left) */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="absolute left-[20%] bottom-[10%] w-12 md:w-16"
+              className="absolute left-[20%] bottom-[15%] w-12 md:w-16 rotate-[10deg]"
             >
               <img src={musicNotes} alt="Music Notes" className="w-full h-auto pointer-events-auto" />
             </motion.div>
@@ -99,7 +99,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="absolute right-[5%] bottom-[25%] w-24 md:w-32"
+              className="absolute right-[8%] bottom-[25%] w-24 md:w-32 rotate-[5deg]"
             >
               <img src={headphones} alt="Headphones" className="w-full h-auto pointer-events-auto" />
             </motion.div>
