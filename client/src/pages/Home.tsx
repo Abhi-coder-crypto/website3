@@ -11,6 +11,7 @@ import cassette from "@assets/Group_(1)_1768203634424.png";
 import musicNotes from "@assets/Group_(2)_1768203634423.png";
 import headphones from "@assets/Group_1768203634425.png";
 import section3Bg from "@assets/Rectangle_(2)_1768205296891.png";
+import cardImg from "@assets/image_1768205726228.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -109,9 +110,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: DIGITAL PRESENCE */}
-      <section className="relative w-full min-h-screen bg-black overflow-hidden flex items-center justify-center">
+      <section className="relative w-full bg-black overflow-hidden flex flex-col items-center">
         {/* Crumpled Paper Background */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 h-[60%]">
           <img 
             src={section3Bg} 
             alt="Background Texture" 
@@ -119,7 +120,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 pt-12 pb-12">
+        <div className="relative z-10 container mx-auto px-6 pt-12 pb-24">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-sans mb-8 tracking-tight text-white leading-tight">
               Abhijit Vaghani - Digital Presence <br /> & Artist Marketing
@@ -127,6 +128,41 @@ export default function Home() {
             <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mt-6 font-sans">
               We partnered with singer Abhijit Vaghani to strengthen his digital presence through strategic content ideation and social media marketing. Our approach focused on showcasing his musical journey, personality, and artistry while building consistent audience engagement across platforms.
             </p>
+          </div>
+        </div>
+
+        {/* Cards Section with overlap */}
+        <div className="relative z-20 w-full bg-white pb-24">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto -mt-32 md:-mt-48">
+              {[1, 2, 3].map((i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.1 }}
+                  className="relative aspect-[3/5] overflow-hidden rounded-[40px_40px_0_0] md:rounded-[60px_60px_0_0] shadow-2xl"
+                >
+                  <img src={cardImg} alt={`Project ${i}`} className="w-full h-full object-cover" />
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Music Player Placeholder */}
+            <div className="mt-16 flex justify-center">
+              <div className="w-full max-w-lg bg-black rounded-2xl p-4 shadow-xl">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-zinc-800 rounded-lg overflow-hidden flex-shrink-0">
+                    {/* Placeholder for music cover */}
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-white text-sm font-medium">Manzoor</div>
+                    <div className="text-zinc-500 text-xs">Abhijit Vaghani</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
