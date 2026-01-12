@@ -15,7 +15,7 @@ import section3Bg from "@assets/Rectangle_(2)_1768205296891.png";
 import cardImg from "@assets/image_1768205726228.png";
 import manzoorCover from "@assets/image_1768206021449.png";
 import playerControls from "@assets/Group_(3)_1768206877954.png";
-import footerBg from "@assets/Rectangle_(3)_1768207305899.png";
+import footerBg from "@assets/Rectangle_(3)_1768207396961.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -183,14 +183,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black py-12 border-t border-white/10">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-zinc-500 text-sm tracking-widest uppercase">
-            © {new Date().getFullYear()} Abhijit Vaghani. All rights reserved.
-          </p>
+      {/* NEW RED SECTION */}
+      <section className="relative w-full overflow-hidden">
+        <div className="relative w-full h-[200px] md:h-[300px]">
+          <img 
+            src={footerBg} 
+            alt="Red Section Background" 
+            className="w-full h-full object-cover"
+          />
         </div>
-      </footer>
+      </section>
     </div>
   );
 }
