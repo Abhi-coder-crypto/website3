@@ -12,6 +12,7 @@ import musicNotes from "@assets/Group_(2)_1768203634423.png";
 import headphones from "@assets/Group_1768203634425.png";
 import section3Bg from "@assets/Rectangle_(2)_1768205296891.png";
 import cardImg from "@assets/image_1768205726228.png";
+import manzoorCover from "@assets/image_1768206021449.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -155,11 +156,11 @@ export default function Home() {
               <div className="w-full max-w-lg bg-black rounded-2xl p-4 shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 bg-zinc-800 rounded-lg overflow-hidden flex-shrink-0">
-                    {/* Placeholder for music cover */}
+                    <img src={manzoorCover} alt="Manzoor Cover" className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-white text-sm font-medium">Manzoor</div>
-                    <div className="text-zinc-500 text-xs">Abhijit Vaghani</div>
+                    <div className="text-white text-sm font-medium font-sans">Manzoor</div>
+                    <div className="text-zinc-500 text-xs font-sans">Abhijit Vaghani</div>
                   </div>
                 </div>
               </div>
