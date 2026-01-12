@@ -134,7 +134,7 @@ export default function Home() {
         {/* Cards Section with overlap */}
         <div className="relative z-20 w-full bg-white pb-24">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-7xl mx-auto -mt-16 md:-mt-24">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-7xl mx-auto -mt-8 md:-mt-12">
               {[1, 2, 3].map((i) => (
                 <motion.div 
                   key={i}
