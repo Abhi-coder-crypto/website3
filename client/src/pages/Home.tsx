@@ -9,7 +9,7 @@ import vinylRecord from "@assets/image_1768197905813.png";
 import headphones from "@assets/Group_(2)_1768197915626.png";
 import playlistTape from "@assets/Group_(1)_1768197915627.png";
 import musicNotes from "@assets/Group_1768197915627.png";
-import vinylCenter from "@assets/Rectangle_(1)_1768197915628.png";
+import vinylCenter from "@assets/Rectangle_(1)_1768202050912.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -62,6 +62,13 @@ export default function Home() {
 
       {/* SECTION 2: WHITE BACKGROUND SECTION */}
       <section className="relative w-full bg-white overflow-hidden py-32 md:py-48">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] z-10">
+          <img 
+            src={vinylCenter} 
+            alt="Vinyl Record" 
+            className="w-full h-auto object-contain"
+          />
+        </div>
         <div className="w-full flex justify-center">
         </div>
       </section>
