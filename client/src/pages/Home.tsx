@@ -79,7 +79,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="absolute left-[5%] top-[25%] w-24 md:w-32 rotate-[-15deg]"
+              className="absolute left-[15%] top-[25%] w-24 md:w-32 rotate-[-15deg]"
             >
               <img src={cassette} alt="Cassette Tape" className="w-full h-auto pointer-events-auto" />
             </motion.div>
