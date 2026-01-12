@@ -24,8 +24,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-primary selection:text-white overflow-hidden">
-      <Navigation />
-
       {/* SECTION 1: HERO */}
       <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         {/* Background Image - Full Cover */}
